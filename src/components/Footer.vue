@@ -25,9 +25,12 @@
         </div>
         <div class="footer-main-column footer-main-right">
           <img src="../assets/img/avadabarbers_footer_appointment_image.png" alt="Cose da barbiere">
-          <button class="footer-main-btn">shop our range now</button>
+          <button class="footer-main-btn">book your appointment</button>
         </div>
       </div>
+    </div>
+    <div class="footer-copyright">
+      @ Copyright Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, vero?
     </div>
   </footer>
 </template>
@@ -98,5 +101,13 @@
         }
       }
     }
+  }
+  .footer-copyright {
+    height: 70px;
+    background-color: #353333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4f659a;
   }
 </style>
