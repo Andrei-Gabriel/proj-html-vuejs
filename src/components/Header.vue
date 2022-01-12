@@ -101,6 +101,7 @@
                         background-color: rgba(0, 0, 0, 0);
                         border: none;
                         border: 2px solid #ffcf6a;
+                        cursor: pointer;
                     }
                     .header-main-btn:hover {
                         opacity: 0.7;
