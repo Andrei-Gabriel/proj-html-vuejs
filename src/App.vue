@@ -22,10 +22,17 @@ export default {
 </script>
 
 <style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+  
   * {
     margin: 0;
     padding: 0;
     font-size: 100%;
     box-sizing: border-box;
+  }
+  .content {
+    max-width: 1100px;
+    margin: 0 auto;
   }
 </style>
