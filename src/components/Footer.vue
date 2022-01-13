@@ -7,13 +7,13 @@
           <button class="footer-main-btn">shop our range now</button>
         </div>
         <div class="footer-main-column footer-main-center">
-          <img src="../assets/img/avadabarbers-logo-x1.png" alt="Logo Avada Baebers">
+          <img :src="require(`../assets/img/${barber.logo}`)" alt="Logo Avada Baebers">
           <ul>
-            <li>Avada Barbers</li>
-            <li>123 New York Street</li>
-            <li>New York City</li>
-            <li>info@yourwebsite.com</li>
-            <li>+ 1 (555) 555-1212</li>
+            <li>{{barber.name}}</li>
+            <li>{{barber.street}}</li>
+            <li>{{barber.street}}</li>
+            <li>{{barber.city}}</li>
+            <li>{{barber.phone}}</li>
           </ul>
           <span class="follow">follow us</span>
           <div class="footer-icons">
@@ -38,6 +38,9 @@
 <script>
     export default {
         name: 'Footer',
+        props: {
+          barber: Object,
+        }
     }
 </script>
 

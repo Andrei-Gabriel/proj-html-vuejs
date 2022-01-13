@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <Main/>
-    <Footer/>
+    <Footer :barber="barberData"/>
   </div>
 </template>
 
@@ -17,6 +17,19 @@ export default {
     Header,
     Main,
     Footer,
+  },
+  data() {
+    return {
+      barberData:
+        {
+          logo: "avadabarbers-logo-x1.png",
+          name: "Avada Barbers",
+          street: "123 New York Street",
+          city: "New York City",
+          email: "info@yourwebsite.com",
+          phone: "+ 1 (555) 555-1212"
+        }
+    }
   }
 }
 </script>
