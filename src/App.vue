@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <Header :smLogo="smallLogo"
-            :hOne="headingOne"
-            :headerSlogan="sloganHeader"
-            :imgHeader="headerImg"/>
+            :headerData="headeMainData"/>
     <Main/>
     <Footer :barber="barberData"
-            :smLogo="smallLogo"/>
+            :smLogo="smallLogo"
+            :colLeft="colLeftData"
+            :colRight="colRightData"
+            :iconsFooter="footerIcons"/>
   </div>
 </template>
 
@@ -24,18 +25,39 @@ export default {
   },
   data() {
     return {
+      // Variables
       smallLogo: "avadabarbers-logo-x1.png",
-      headingOne: "Barber Shop",
-      sloganHeader: "The Pinnacle of Male Grooming",
-      headerImg: "avadabarbers_hero_focalmirror-400x550.png",
-      barberData:
-        {
-          name: "Avada Barbers",
-          street: "123 New York Street",
-          city: "New York City",
-          email: "info@yourwebsite.com",
-          phone: "+ 1 (555) 555-1212"
-        }
+
+      //Arrays
+      footerIcons: [
+        "fab fa-facebook-f",
+        "fab fa-twitter",
+        "fab fa-youtube",
+        "fab fa-instagram",
+      ],
+      
+      // Objects
+      headeMainData: {
+        headingOne: "Barber Shop",
+        sloganHeader: "The Pinnacle of Male Grooming",
+        headerTextBtn: "learn more",
+        headerImg: "avadabarbers_hero_focalmirror-400x550.png",
+      },
+      barberData: {
+        name: "Avada Barbers",
+        street: "123 New York Street",
+        city: "New York City",
+        email: "info@yourwebsite.com",
+        phone: "+ 1 (555) 555-1212"
+      },
+      colLeftData: {
+        img: "avadabarbers_footer_shop_image.png",
+        textBtn: "shop our range now",
+      },
+      colRightData: {
+        img: "avadabarbers_footer_appointment_image.png",
+        textBtn: "book your appointment",
+      },
     }
   }
 }

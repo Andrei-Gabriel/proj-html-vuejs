@@ -12,12 +12,12 @@
         <div class="header-main">
             <div class="header-main-content content">
                 <div class="header-main-info">
-                    <h1>{{hOne}}</h1>
+                    <h1>{{headerData.headingOne}}</h1>
                     <hr>
-                    <span>{{headerSlogan}}</span>
-                    <button class="header-main-btn">learn more</button>
+                    <span>{{headerData.sloganHeader}}</span>
+                    <button class="header-main-btn">{{headerData.headerTextBtn}}</button>
                 </div>
-                <img class="header-main-img" :src="require(`../assets/img/${imgHeader}`)" alt="Barber">
+                <img class="header-main-img" :src="require(`../assets/img/${headerData.headerImg}`)" alt="Barber">
             </div>
         </div>
     </header>
@@ -28,10 +28,19 @@
         name: 'Header',
         props: {
           smLogo: String,
-          hOne: String,
-          headerSlogan: String,
-          imgHeader: String,
-        }
+          headerData: Object,
+        },
+        // created () {
+        //     window.addEventListener('scroll', this.handleScroll);
+        // },
+        // destroyed () {
+        //     window.removeEventListener('scroll', this.handleScroll);
+        // },
+        // methods: {
+        //     handleScroll (event) {
+            
+        //     }
+        // }
     }
 </script>
 

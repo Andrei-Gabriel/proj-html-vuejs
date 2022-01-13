@@ -3,8 +3,8 @@
     <div class="footer-main">
       <div class="footer-main-content content">
         <div class="footer-main-column footer-main-left">
-          <img src="../assets/img/avadabarbers_footer_shop_image.png" alt="Cose da barbiere">
-          <button class="footer-main-btn">shop our range now</button>
+          <img :src="require(`../assets/img/${colLeft.img}`)" alt="Cose da barbiere">
+          <button class="footer-main-btn">{{colLeft.textBtn}}</button>
         </div>
         <div class="footer-main-column footer-main-center">
           <img :src="require(`../assets/img/${smLogo}`)" alt="Logo Avada Baebers">
@@ -17,20 +17,17 @@
           </ul>
           <span class="follow">follow us</span>
           <div class="footer-icons">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-instagram"></i>
+            <i v-for="(icons, index) in iconsFooter" :key="index" :class="`${iconsFooter[index]}`"></i>
           </div>
         </div>
         <div class="footer-main-column footer-main-right">
-          <img src="../assets/img/avadabarbers_footer_appointment_image.png" alt="Cose da barbiere">
-          <button class="footer-main-btn">book your appointment</button>
+          <img :src="require(`../assets/img/${colRight.img}`)" alt="Cose da barbiere">
+          <button class="footer-main-btn">{{colRight.textBtn}}</button>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
-      @ Copyright Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, vero?
+      @ Copyright 2012 - {{getYear()}} | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, vero?
     </div>
   </footer>
 </template>
@@ -40,7 +37,15 @@
         name: 'Footer',
         props: {
           smLogo: String,
+          iconsFooter: Array,
           barber: Object,
+          colLeft: Object,
+          colRight: Object,
+        },
+        methods: {
+          getYear() {
+            return new Date().getFullYear()
+          }
         }
     }
 </script>
@@ -107,6 +112,7 @@
     }
   }
   .footer-copyright {
+    font-family: 'Lato', sans-serif;
     height: 70px;
     background-color: #353333;
     display: flex;
