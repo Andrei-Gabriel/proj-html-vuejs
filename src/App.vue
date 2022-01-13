@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header :smLogo="smallLogo"
+            :hOne="headingOne"
+            :headerSlogan="sloganHeader"
+            :imgHeader="headerImg"/>
     <Main/>
-    <Footer :barber="barberData"/>
+    <Footer :barber="barberData"
+            :smLogo="smallLogo"/>
   </div>
 </template>
 
@@ -20,9 +24,12 @@ export default {
   },
   data() {
     return {
+      smallLogo: "avadabarbers-logo-x1.png",
+      headingOne: "Barber Shop",
+      sloganHeader: "The Pinnacle of Male Grooming",
+      headerImg: "avadabarbers_hero_focalmirror-400x550.png",
       barberData:
         {
-          logo: "avadabarbers-logo-x1.png",
           name: "Avada Barbers",
           street: "123 New York Street",
           city: "New York City",

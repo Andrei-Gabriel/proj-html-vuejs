@@ -7,7 +7,7 @@
           <button class="footer-main-btn">shop our range now</button>
         </div>
         <div class="footer-main-column footer-main-center">
-          <img :src="require(`../assets/img/${barber.logo}`)" alt="Logo Avada Baebers">
+          <img :src="require(`../assets/img/${smLogo}`)" alt="Logo Avada Baebers">
           <ul>
             <li>{{barber.name}}</li>
             <li>{{barber.street}}</li>
@@ -39,6 +39,7 @@
     export default {
         name: 'Footer',
         props: {
+          smLogo: String,
           barber: Object,
         }
     }

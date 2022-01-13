@@ -2,7 +2,7 @@
     <header>
         <div class="header-top">
             <div class="header-top-content content">
-                <img src="../assets/img/avadabarbers-logo-x1.png" alt="Logo Avada Baebers">
+                <img :src="require(`../assets/img/${smLogo}`)">
                 <div class="header-icons">
                     <i class="fas fa-shopping-cart"></i>
                     <i class="fas fa-bars"></i>
@@ -12,12 +12,12 @@
         <div class="header-main">
             <div class="header-main-content content">
                 <div class="header-main-info">
-                    <h1>Barber Shop</h1>
+                    <h1>{{hOne}}</h1>
                     <hr>
-                    <span>The Pinnacle of Male Grooming</span>
+                    <span>{{headerSlogan}}</span>
                     <button class="header-main-btn">learn more</button>
                 </div>
-                <img class="header-main-img" src="../assets/img/avadabarbers_hero_focalmirror-400x550.png" alt="Barber">
+                <img class="header-main-img" :src="require(`../assets/img/${imgHeader}`)" alt="Barber">
             </div>
         </div>
     </header>
@@ -26,6 +26,12 @@
 <script>
     export default {
         name: 'Header',
+        props: {
+          smLogo: String,
+          hOne: String,
+          headerSlogan: String,
+          imgHeader: String,
+        }
     }
 </script>
 
