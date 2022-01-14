@@ -1,14 +1,20 @@
 <template>
   <main>
+    <Award/>
   </main>
 </template>
 
 <script>
-    export default {
-        name: 'Main',
-    }
+  import Award from './main_sections/Award.vue'
+
+  export default {
+      name: 'Main',
+      components: {
+        Award,
+      }
+  }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+  
 </style>

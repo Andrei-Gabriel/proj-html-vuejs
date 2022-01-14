@@ -80,7 +80,7 @@
             }
         }
         .header-main {
-            padding-bottom: 200px;
+            padding-bottom: 150px;
             .header-main-content {
                 display: flex;
                 align-items: center;
@@ -117,9 +117,10 @@
                         border: none;
                         border: 2px solid #ffcf6a;
                         cursor: pointer;
+                        opacity: 0.7;
                     }
                     .header-main-btn:hover {
-                        opacity: 0.7;
+                        opacity: 0.5;
                     }
                 }
                 .header-main-img {
