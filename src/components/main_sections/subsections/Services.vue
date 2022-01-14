@@ -24,7 +24,7 @@
         justify-content: center;
         width: 25%;
         img {
-            width: 15%;
+            height: 65px;
         }
         h3 {
             color: #ae8652;
