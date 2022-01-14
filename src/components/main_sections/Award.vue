@@ -52,5 +52,9 @@
                 opacity: 0.5;
             }
         }
+        svg {
+            position: relative;
+            bottom: -4px;
+        }
     }
 </style>
